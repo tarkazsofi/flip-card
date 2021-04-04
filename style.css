@@ -40,3 +40,29 @@ body {
 .flipped .back {
   transform: rotateY(360deg);
 }
+@keyframes frontRotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.animated .front {
+  animation: frontRotation 8s linear infinite;
+}
+@keyframes backRotation {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(540deg);
+  }
+}
+.animated .back {
+  animation: backRotation 8s linear infinite;
+}
+.stopped .back,
+.stopped .front {
+  animation-play-state: paused;
+}
