@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+}
+.card {
+  height: 80vmin;
+  aspect-ratio: 3/5;
+  position: relative;
+}
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  backface-visibility: hidden;
+  transition: transform 2500ms;
+}
+.front {
+  background-image: url(http://placekitten.com/600/1000);
+}
+.back {
+  background-image: url(https://www.placecage.com/600/1000);
+  transform: rotateY(180deg);
+}
+.flipped .front {
+  transform: rotateY(180deg);
+}
+.flipped .back {
+  transform: rotateY(360deg);
+}
