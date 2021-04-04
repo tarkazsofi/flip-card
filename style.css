@@ -25,6 +25,9 @@ body {
   width: 100%;
   background-size: cover;
   backface-visibility: hidden;
+}
+.flip .front,
+.flip .back {
   transition: transform 2500ms;
 }
 .front {
